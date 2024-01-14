@@ -1,0 +1,7 @@
+TODO:
+recover from packet loss in connect
+implement more parts of it
+
+code will not get documented.
+
+language: gnuc99
