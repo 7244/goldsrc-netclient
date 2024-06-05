@@ -4,18 +4,14 @@
 #define BLL_set_declare_NodeReference 1
 #define BLL_set_declare_rest 0
 #define BLL_set_Language 0
-/* TODO use some witch constant */
-#define BLL_set_UseUninitialisedValues 0
-#include <WITCH/BLL/BLL.h>
+#include <BLL/BLL.h>
 /* session start list */
 #define BLL_set_prefix ssl
 #define bll_set_type_node uint16_t
 #define BLL_set_declare_NodeReference 1
 #define BLL_set_declare_rest 0
 #define BLL_set_Language 0
-/* TODO use some witch constant */
-#define BLL_set_UseUninitialisedValues 0
-#include <WITCH/BLL/BLL.h>
+#include <BLL/BLL.h>
 
 /* session info list */
 #define BLL_set_prefix sil
@@ -27,9 +23,7 @@
   uint32_t StartedSessionCount; \
   ssl_NodeReference_t ssnr;
 #define BLL_set_Language 0
-/* TODO use some witch constant */
-#define BLL_set_UseUninitialisedValues 0
-#include <WITCH/BLL/BLL.h>
+#include <BLL/BLL.h>
 /* session start list */
 #define BLL_set_prefix ssl
 #define bll_set_type_node uint16_t
@@ -38,17 +32,13 @@
 #define BLL_set_NodeData \
   sil_NodeReference_t sinr;
 #define BLL_set_Language 0
-/* TODO use some witch constant */
-#define BLL_set_UseUninitialisedValues 0
-#include <WITCH/BLL/BLL.h>
+#include <BLL/BLL.h>
 
 #define BLL_set_prefix SessionTimeOutList
 #define bll_set_type_node uint16_t
 #define BLL_set_NodeDataType s_t *
 #define BLL_set_Language 0
-/* TODO use some witch constant */
-#define BLL_set_UseUninitialisedValues 0
-#include <WITCH/BLL/BLL.h>
+#include <BLL/BLL.h>
 
 struct s_t{
   uint8_t SocketIndex;

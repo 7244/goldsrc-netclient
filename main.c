@@ -65,7 +65,7 @@ void cb_Timer(EV_t *listener, EV_timer_t *evt){
   ssl_NodeReference_t ssnr = ssl_GetNodeFirst(&pile.sp.ssl);
 
   while(1){
-    if(ssl_IsNodeReferenceEqual(ssnr, pile.sp.ssl.dst)){
+    if(ssl_inre(ssnr, pile.sp.ssl.dst)){
       break;
     }
     if(!CanWeStartSession()){
@@ -115,7 +115,7 @@ void cb_SessionTimeOut(EV_t *listener, EV_timer_t *evt){
   uint64_t ct = EV_nowi(listener);
 
   SessionTimeOutList_NodeReference_t nr = SessionTimeOutList_GetNodeFirst(&pile.sp.SessionTimeOutList);
-  while(!SessionTimeOutList_IsNodeReferenceEqual(nr, pile.sp.SessionTimeOutList.dst)){
+  while(!SessionTimeOutList_inre(nr, pile.sp.SessionTimeOutList.dst)){
     SessionTimeOutList_Node_t *n = SessionTimeOutList_GetNodeByReference(&pile.sp.SessionTimeOutList, nr);
     SessionTimeOutList_NodeReference_t next = n->NextNodeReference;
     s_t *s = n->data;
