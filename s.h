@@ -1,13 +1,13 @@
 /* session info list */
 #define BLL_set_prefix sil
-#define bll_set_type_node uint16_t
+#define BLL_set_type_node uint16_t
 #define BLL_set_declare_NodeReference 1
 #define BLL_set_declare_rest 0
 #define BLL_set_Language 0
 #include <BLL/BLL.h>
 /* session start list */
 #define BLL_set_prefix ssl
-#define bll_set_type_node uint16_t
+#define BLL_set_type_node uint16_t
 #define BLL_set_declare_NodeReference 1
 #define BLL_set_declare_rest 0
 #define BLL_set_Language 0
@@ -15,7 +15,7 @@
 
 /* session info list */
 #define BLL_set_prefix sil
-#define bll_set_type_node uint16_t
+#define BLL_set_type_node uint16_t
 #define BLL_set_declare_NodeReference 0
 #define BLL_set_declare_rest 1
 #define BLL_set_NodeData \
@@ -26,7 +26,7 @@
 #include <BLL/BLL.h>
 /* session start list */
 #define BLL_set_prefix ssl
-#define bll_set_type_node uint16_t
+#define BLL_set_type_node uint16_t
 #define BLL_set_declare_NodeReference 0
 #define BLL_set_declare_rest 1
 #define BLL_set_NodeData \
@@ -35,7 +35,7 @@
 #include <BLL/BLL.h>
 
 #define BLL_set_prefix SessionTimeOutList
-#define bll_set_type_node uint16_t
+#define BLL_set_type_node uint16_t
 #define BLL_set_NodeDataType s_t *
 #define BLL_set_Language 0
 #include <BLL/BLL.h>
