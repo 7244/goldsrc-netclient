@@ -353,7 +353,7 @@ typedef struct{
 
 DeltaType_t *FindDeltaType(const void *Name, uintptr_t NameSize){
   for(uint32_t i = 0; i < sizeof(DeltaTypes) / sizeof(DeltaTypes[0]); i++){
-    if(NameSize == MEM_cstreu(DeltaTypes[i]->DeltaName) && STR_ncmp(Name, DeltaTypes[i]->DeltaName, NameSize) == 0){
+    if(NameSize == MEM_cstrlen(DeltaTypes[i]->DeltaName) && STR_ncmp(Name, DeltaTypes[i]->DeltaName, NameSize) == 0){
       return DeltaTypes[i];
     }
   }
