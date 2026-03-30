@@ -1180,7 +1180,7 @@ void cb_InputEvent(EV_t *listener, EV_event_t *e, uint32_t flag){
   uint8_t Input[0x1000];
 
   IO_fd_t fd;
-  IO_fd_set(&fd, STDIN_FILENO);
+  IO_fd_set(&fd, IO_STDIN_FILENO);
   IO_ssize_t size = IO_read(&fd, Input, sizeof(Input));
   if(size < 0){
     PR_abort();
@@ -1221,7 +1221,7 @@ int main(){
 
   {
     IO_fd_t fd;
-    IO_fd_set(&fd, STDIN_FILENO);
+    IO_fd_set(&fd, IO_STDIN_FILENO);
     EV_event_init_fd(&pile.InputEvent, &fd, cb_InputEvent, EV_READ);
     EV_event_start(&pile.listener, &pile.InputEvent);
   }
